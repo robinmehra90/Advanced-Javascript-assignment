@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitalize First Letter of each word</title>
+	<script type="text/javascript">
+	(function() {
+    var str = prompt("Enter a valid String :","");
+    var splitstr = str.split(" ");
+    for (var i = 0; i < splitstr.length; i++) {
+        var a = splitstr[i];
+        splitstr[i] = splitstr[i].substr(1, splitstr[i].length);
+        var ret = a.charAt(0).toUpperCase() + splitstr[i];
+        splitstr[i] = ret;
+    }
+    var retVal = "";
+    for (var i = 0; i < splitstr.length; i++) {
+        retVal = retVal + " " + splitstr[i];
+    }
+    alert(retVal);
+})();
+</script>
+</head>
+<body>
+
+</body>
+</html>

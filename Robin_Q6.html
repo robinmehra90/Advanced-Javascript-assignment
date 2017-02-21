@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock</title>
+	<script type="text/javascript">
+	function Time(){
+		var nw=new Date();
+		var h=nw.getHours();
+		var m=nw.getMinutes();
+		var s=nw.getSeconds();
+		var stoph = h + 2;
+    	var stopm = m;
+   	    var stops = s;
+    if (stoph == h && stopm == m && stops == s) {
+        alert("The clock has successfully ran for 2 hours.");
+    } else {
+		m=checkTime(m);
+		s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(Time, 500);
+
+}}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+ 	</script>
+</head>
+<body onload="Time()">
+<h1 style="text-align: center;">Clock : </h1>
+<h1 id="clock" style="text-align: center;color: blue;"></h1>
+</body>
+</html>

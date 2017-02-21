@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter Using Closure</title>
+	<script type="text/javascript">
+
+		var c = (function() {
+    var c = 0;
+    return function() { return c++; }
+}());
+
+function generate() {
+    var a = c();
+    document.getElementById("count").innerHTML = a;
+}
+	</script>
+</head>
+<body>
+<input type="button" id="b1" name="counter" value="counter" onclick="generate()"><br><br>
+<h1 style="color: red;text-align: center;" id="count"></h1>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback inside a Callback</title>
+	<script type="text/javascript">
+		function callback1(callback2) {
+    alert("callback1");
+    setTimeout(function() {
+        alert("callback1 nested");
+        callback2("callback2");
+    },1200);
+}
+callback1(function(val) {
+    alert(val);
+})
+	</script>
+</head>
+<body>
+<h1>Click the button and enter console</h1>
+<input type="button" name="console" value="console" onclick="cbstruct()">
+</body>
+</html>

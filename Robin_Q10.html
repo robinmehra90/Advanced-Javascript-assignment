@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Removing Duplicae Character from String</title>
+	<script type="text/javascript">
+		(function() {
+    var str = prompt("enter a string", "");
+    var hash = {};
+    for (var i = 0; i < str.length; i++) {
+        if (hash[str.charAt(i)] != 1) {
+            hash[str.charAt(i)] = 1;
+        }
+    }
+    var res = " ";
+    for (var key in hash) {
+        res = res + key;
+    }
+    alert("Result String is : " + res);
+})();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

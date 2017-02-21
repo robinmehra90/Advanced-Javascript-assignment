@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highest Occured Character</title>
+	<script type="text/javascript">
+		(function(){
+		var str=prompt("Enter a string","");
+		var temp=str.split("");
+		temp.sort();
+		var count=0;
+		var first=temp[0];
+		var result;
+		var max=0;
+		for(var i=0;i<temp.length;i++)
+		{
+			if(first==temp[i+1])
+				count++;
+			else{
+				if(count>max)
+				{
+					max=count+1;
+					result=temp[i];
+					count=0;
+					first=temp[i+1];
+				}
+			else{
+                count = 0;
+                first = temp[i + 1];
+            	}
+			}
+		}
+	alert("Most Occuring character is : "+result+" and no. of times it occured is : "+max);	
+})();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
